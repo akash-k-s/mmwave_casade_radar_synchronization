@@ -8,10 +8,10 @@ direction = count
 pause(2);
 if mod(direction, 2)
     disp('moving in -x direction')
-    writeline(controller,"G91X-200F20")
+    writeline(controller,"G01X-200F10")
 else
     disp('moving in +x direction')
-    writeline(controller,"G91X200F20")
+    writeline(controller,"G01X200F10")
 end
 %% reading  the output from serial 
 read(controller,1000,"string");
